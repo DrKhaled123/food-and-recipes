@@ -31,6 +31,13 @@ const Hero = ({ onBrowse }) => {
                                         Browse Recipes
                                         <ChefHat className="ml-2 h-5 w-5" />
                                    </button>
+                                   <a
+                                        href="/advanced-recipes.html"
+                                        className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl shadow-lg text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
+                                   >
+                                        Advanced Recipes
+                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                   </a>
                               </div>
                          </div>
                     </div>
