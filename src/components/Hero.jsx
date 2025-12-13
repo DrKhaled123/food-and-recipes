@@ -26,7 +26,7 @@ const Hero = ({ onBrowse }) => {
                               <div className="flex justify-center gap-4">
                                    <button
                                         onClick={onBrowse}
-                                        className="inline-flex items-center px-8 py-4 border border-gray-200 text-lg font-medium rounded-xl text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all"
+                                        className="inline-flex items-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-accent hover:brightness-105 shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-all transform hover:scale-105 animate-pulse"
                                    >
                                         Browse Recipes
                                         <ChefHat className="ml-2 h-5 w-5" />
