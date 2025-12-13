@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وصفات طبخ جديدة | New Cooking Recipes</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for smooth transition and Arabic font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Noto Kufi Arabic', 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+
+        /* Ensure smooth transition for height */
+        .collapse-content {
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            max-height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .collapse-content.open {
+            max-height: 1000px; /* Large enough value to show all content */
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Custom scrollbar for better appearance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-extrabold text-gray-800 mb-2">قائمة الوصفات الجديدة</h1>
+        <p class="text-xl text-green-600 font-medium">New Meal Prep Recipes (8 Items)</p>
+    </header>
+
+    <div id="recipes-container" class="max-w-4xl mx-auto space-y-4">
+        <!-- Recipes will be injected here by JavaScript -->
+    </div>
+
+    <script>
+        const recipesData = [
+            // 57. High-Calorie Tahini and Nut Overnight Oats
+            {
+                id: 57,
+                title_ar: "شوفان الشوفان والطحينة عالي السعرات (وجبة تضخيم)",
+                title_en: "High-Calorie Tahini and Nut Overnight Oats (Bulking Breakfast)",
+                cuisine_ar: "عربي مُدمج، عالي السعرات/تضخيم (استخدام الطحينة و الشوفان)",
+                cuisine_en: "Arabian Fusion, High-Calorie/Bulking (Utilizing Tahini and Oats)",
+                macros_ar: "حوالي 600 سعرة حرارية، 70 جرام كربوهيدرات، 20 جرام بروتين، 28 جرام دهون",
+                macros_en: "Approx. 600 Cal, 70g Carbs, 20g Protein, 28g Fat",
+                ingredients_ar: "60 جرام شوفان مدرفل، 30 جرام طحينة (حوالي 3 ملاعق كبيرة)، 200 مل زبادي/حليب كامل الدسم، 10 جرام عسل/دبس تمر، 10 جرام جوز مقطع، رشة قرفة.",
+                ingredients_en: "60g Rolled Oats, 30g Tahini (approx. 3 tbsp), 200ml Full-fat yogurt/milk, 10g Honey/Date syrup, 10g Chopped Walnuts, Pinch of Cinnamon.",
+                skills_ar: "النقع/التشريب، تقسيم الحصص، التحضير بدون طهي",
+                skills_en: "Soaking/Infusion, Portioning, No-Cook Prep",
+                prep_ar: "1. خلط جميع المكونات في وعاء أو برطمان محكم الإغلاق. 2. التحريك جيداً حتى تتجانس الطحينة بالكامل. 3. التبريد طوال الليل. سيمتص الشوفان السائل، مما يخلق وجبة إفطار سميكة وكثيفة السعرات الحرارية وجاهزة للأكل (استراتيجية التحكم في الحصص).",
+                prep_en: "1. Combine all ingredients in a sealed jar or container. 2. Stir well until the tahini is fully incorporated. 3. Refrigerate overnight. The oats will absorb the liquid, creating a thick, calorically dense, and ready-to-eat breakfast (Portion Control strategy).",
+                color: "pink"
+            },
+            // 58. Keto Spiced Ground Lamb Casserole
+            {
+                id: 58,
+                title_ar: "طاجن لحم الضأن المفروم بالبهارات (كيتو)",
+                title_en: "Keto Spiced Ground Lamb Casserole",
+                cuisine_ar: "عربي/كيتو، قليل الكربوهيدرات (الطهي على دفعات باستخدام لحم الضأن و الجبن)",
+                cuisine_en: "Arabian/Keto, Low-Carb (Batch cooking with Lamb and Cheese)",
+                macros_ar: "حوالي 650 سعرة حرارية، 8 جرام صافي كربوهيدرات، 40 جرام بروتين، 52 جرام دهون",
+                macros_en: "Approx. 650 Cal, 8g Net Carbs, 40g Protein, 52g Fat",
+                ingredients_ar: "150 جرام لحم ضأن مفروم (مزيج 80/20)، 100 جرام قطع باذنجان مطبوخة، 30 جرام جبنة حلوم (مكعبة)، 15 مل زيت زيتون، بهارات (كمون، كزبرة، فلفل حار).",
+                ingredients_en: "150g Ground lamb (80/20 mix), 100g Cooked eggplant chunks, 30g Halloumi cheese (cubed), 15ml Olive oil, Spices (Cumin, Coriander, Chili).",
+                skills_ar: "القلي السريع، التغطية بالطبقات، الخبز/تحضير الطواجن",
+                skills_en: "Sautéing, Layering, Baking/Casserole Prep",
+                prep_ar: "1. تحمير لحم الضأن المفروم وتتبيله بكمية كبيرة من البهارات. 2. تغطية قاع طبق فرن صغير بالباذنجان المطبوخ وخليط لحم الضأن. 3. وضع مكعبات جبنة الحلوم بسخاء في الأعلى. 4. الخبز على درجة 180 مئوية (356 فهرنهايت) لمدة 10-15 دقيقة حتى يذوب الجبن ويصبح ذهبياً. هذه طاجن ممتاز لتحضير البروتين ويمكن تقسيمه لعدة أيام.",
+                prep_en: "1. Brown the ground lamb and season heavily with spices. 2. Layer the bottom of a small oven dish with cooked eggplant and lamb mixture. 3. Top generously with Halloumi cheese cubes. 4. Bake at 180°C (356°F) for 10-15 minutes until the cheese is melted and golden. This is an excellent Protein Prep casserole that can be portioned for multiple days.",
+                color: "purple"
+            },
+            // 59. Mediterranean Lentil and Quinoa Salad
+            {
+                id: 59,
+                title_ar: "سلطة العدس والكينوا المتوسطية (عالية الألياف)",
+                title_en: "Mediterranean Lentil and Quinoa Salad (High Fiber)",
+                cuisine_ar: "عام، عالي الألياف، متوسط الكربوهيدرات (بروتين نباتي وكربوهيدرات معقدة)",
+                cuisine_en: "General, High-Fiber, Medium-Carb (Plant-based protein and complex carbs)",
+                macros_ar: "حوالي 430 سعرة حرارية، 60 جرام كربوهيدرات، 18 جرام بروتين، 12 جرام دهون",
+                macros_en: "Approx. 430 Cal, 60g Carbs, 18g Protein, 12g Fat",
+                ingredients_ar: "50 جرام عدس مطبوخ، 50 جرام كينوا مطبوخة، 100 جرام خيار، طماطم، بصل (مكعبات)، 15 مل زيت زيتون، عصير ليمون، بقدونس، نعناع، كمون.",
+                ingredients_en: "50g Cooked lentils, 50g Cooked quinoa, 100g Cucumber, tomato, onion (diced), 15ml Olive oil, Lemon juice, Parsley, Mint, Cumin.",
+                skills_ar: "التتبيل، التجميع البسيط، تحضير الحبوب على دفعات",
+                skills_en: "Dressing, Simple Assembly, Grain Batching",
+                prep_ar: "1. خلط العدس والكينوا المطبوخة مسبقاً (استراتيجية تحضير الحبوب). 2. إضافة جميع الخضروات والأعشاب الطازجة المقطعة. 3. خفق زيت الزيتون وعصير الليمون والكمون لعمل التتبيلة. 4. تقليب السلطة بلطف. هذه السلطة ممتازة للتحكم في الحصص وتوفر مصدراً بطيء الإطلاق للطاقة.",
+                prep_en: "1. Combine the pre-cooked lentils and quinoa (Grain Preparation strategy). 2. Add all diced fresh vegetables and herbs. 3. Whisk together the olive oil, lemon juice, and cumin for the dressing. 4. Toss the salad gently. This salad is excellent for Portion Control and provides a slow-releasing energy source.",
+                color: "yellow"
+            },
+            // 60. Spiced Chicken and Basmati Rice Soup (Shorba)
+            {
+                id: 60,
+                title_ar: "شوربة الأرز البسمتي والدجاج المتبل",
+                title_en: "Spiced Chicken and Basmati Rice Soup (Shorba)",
+                cuisine_ar: "عربي/شوربة، عالي البروتين، متوسط الكربوهيدرات (طعام مريح للتعافي)",
+                cuisine_en: "Arabian/Shorba, High-Protein, Medium-Carb (Comfort food for recovery)",
+                macros_ar: "حوالي 410 سعرة حرارية، 35 جرام كربوهيدرات، 45 جرام بروتين، 10 جرام دهون",
+                macros_en: "Approx. 410 Cal, 35g Carbs, 45g Protein, 10g Fat",
+                ingredients_ar: "120 جرام صدر دجاج مبشور (من الدفعة)، 60 جرام أرز بسمتي مطبوخ (من الدفعة)، مرق دجاج (قليل الصوديوم)، 5 مل زيت زيتون، بهارات (كمون، هيل)، عصير ليمون، كزبرة طازجة.",
+                ingredients_en: "120g Shredded chicken breast (from batch), 60g Cooked Basmati rice (from batch), Chicken broth (low sodium), 5ml Olive oil, Spices (Cumin, Cardamom), Lemon juice, Fresh cilantro.",
+                skills_ar: "صناعة المرق، إعادة التسخين، تعديل النكهة",
+                skills_en: "Broth Making, Reheating, Flavor Adjustment",
+                prep_ar: "1. تسخين مرق الدجاج مع البهارات. 2. إضافة الدجاج المبشور المطبوخ مسبقاً (تحضير البروتين) والأرز البسمتي المطبوخ مسبقاً (تحضير الحبوب). 3. الغليان ببطء لفترة وجيزة للسماح للنكهات بالاندماج. 4. الإنهاء بقليل من عصير الليمون الطازج وقليل من زيت الزيتون. هذا الحساء هو وجبة سهلة الهضم وغنية بالمغذيات للتعافي أو العشاء الخفيف.",
+                prep_en: "1. Heat the chicken broth with spices. 2. Add the pre-cooked shredded chicken (Protein Prep) and pre-cooked Basmati rice (Grain Preparation). 3. Simmer briefly to allow flavors to combine. 4. Finish with a squeeze of fresh lemon juice and a drizzle of olive oil. This soup is a highly digestible, nutrient-dense meal for recovery or light dinner.",
+                color: "red"
+            },
+            // 61. Vegan Chickpea & Sweet Potato Curry
+            {
+                id: 61,
+                title_ar: "كاري الحمص والبطاطا الحلوة (نباتي، للتحضير المسبق)",
+                title_en: "Vegan Chickpea & Sweet Potato Curry (Batch Prep)",
+                cuisine_ar: "هندي/نباتي، عالي الألياف، متوسط الكربوهيدرات (وجبة أساسية للتحضير المسبق)",
+                cuisine_en: "Indian/Vegan, High Fiber, Medium Carb (Staple Batch Meal)",
+                macros_ar: "حوالي 450 سعرة حرارية، 65 جرام كربوهيدرات، 15 جرام بروتين، 15 جرام دهون",
+                macros_en: "Approx. 450 Cal, 65g Carbs, 15g Protein, 15g Fat",
+                ingredients_ar: "100 جرام قطع بطاطا حلوة مطبوخة، 80 جرام حمص (معلب/مصفى)، 100 مل حليب جوز الهند (خفيف)، 15 جرام قاعدة بصل/ثوم/زنجبيل، 5 جرام مسحوق كاري، 5 مل زيت جوز الهند.",
+                ingredients_en: "100g Cooked sweet potato chunks, 80g Chickpeas (canned/drained), 100ml Coconut milk (light), 15g Onion/Garlic/Ginger base, 5g Curry powder, 5ml Coconut oil.",
+                skills_ar: "القلي السريع، الغليان الخفيف، بناء النكهات بالطبقات، الطهي على دفعات",
+                skills_en: "Sautéing, Simmering, Flavor layering, Batch Cooking",
+                prep_ar: "1. قلي البصل/الثوم/الزنجبيل بزيت جوز الهند. 2. إضافة مسحوق الكاري والطهي لفترة وجيزة. 3. إضافة البطاطا الحلوة والحمص وحليب جوز الهند. 4. الغليان الخفيف لمدة 10-15 دقيقة حتى يصبح المزيج سميكًا. مثالية للطهي على دفعات والتخزين في الفريزر.",
+                prep_en: "1. Sauté onion/garlic/ginger in coconut oil. 2. Add curry powder and cook briefly. 3. Add sweet potato, chickpeas, and coconut milk. 4. Simmer for 10-15 minutes until thick. Ideal for Batch Cooking and freezer storage.",
+                color: "green"
+            },
+            // 62. Baked Salmon with Lemon-Herb Marinade
+            {
+                id: 62,
+                title_ar: "سلمون مشوي بتتبيلة الليمون والأعشاب (تحضير سريع)",
+                title_en: "Baked Salmon with Lemon-Herb Marinade (Quick Prep)",
+                cuisine_ar: "متوسطي، عالي البروتين، مناسب للكيتو (تحضير البروتين)",
+                cuisine_en: "Mediterranean, High Protein, Keto-friendly (Protein Prep)",
+                macros_ar: "حوالي 480 سعرة حرارية، 5 جرام كربوهيدرات، 45 جرام بروتين، 30 جرام دهون",
+                macros_en: "Approx. 480 Cal, 5g Carbs, 45g Protein, 30g Fat",
+                ingredients_ar: "150 جرام قطعة فيليه سلمون، 15 مل زيت زيتون، قشر/عصير ليمون، شبت/بقدونس طازج، ملح، فلفل، رشة بابريكا.",
+                ingredients_en: "150g Salmon fillet, 15ml Olive oil, Lemon zest/juice, Fresh dill/parsley, Salt, Pepper, Pinch of Paprika.",
+                skills_ar: "التتبيل، الخبز، التحكم في درجة الحرارة، تحضير سريع",
+                skills_en: "Marinating, Baking, Temperature Control, Quick Prep",
+                prep_ar: "1. خفق مكونات التتبيلة وتغطية السلمون بها. 2. التتبيل لمدة 15 دقيقة (أو حتى 4 ساعات). 3. الخبز على درجة 200 مئوية (392 فهرنهايت) لمدة 12-15 دقيقة حتى يصبح طرياً. ممتاز لتحضير البروتين السريع ليقدم مع الخضروات الورقية أو الأرز.",
+                prep_en: "1. Whisk marinade ingredients and coat the salmon. 2. Marinate for 15 minutes (or up to 4 hours). 3. Bake at 200°C (392°F) for 12-15 minutes until flaky. Excellent for quick Protein Prep to be served with greens or rice.",
+                color: "blue"
+            },
+            // 63. Feta and Spinach Stuffed Chicken Breast
+            {
+                id: 63,
+                title_ar: "صدر دجاج محشو بالفيتا والسبانخ (عالي البروتين)",
+                title_en: "Feta and Spinach Stuffed Chicken Breast (High Protein)",
+                cuisine_ar: "يوناني/عام، عالي البروتين، قليل الكربوهيدرات (بروتين أساسي)",
+                cuisine_en: "Greek/General, High Protein, Low Carb (Core Protein)",
+                macros_ar: "حوالي 420 سعرة حرارية، 5 جرام كربوهيدرات، 55 جرام بروتين، 20 جرام دهون",
+                macros_en: "Approx. 420 Cal, 5g Carbs, 55g Protein, 20g Fat",
+                ingredients_ar: "180 جرام صدر دجاج، 30 جرام جبنة فيتا (مفتتة)، 30 جرام سبانخ طازجة، 5 مل زيت زيتون، مسحوق ثوم، أوريغانو مجفف.",
+                ingredients_en: "180g Chicken breast, 30g Feta cheese (crumbled), 30g Fresh spinach, 5ml Olive oil, Garlic powder, Dried oregano.",
+                skills_ar: "الحشو، القلي السريع (اختياري)، الخبز، التحكم في الحصص",
+                skills_en: "Stuffing, Searing (optional), Baking, Portion Control",
+                prep_ar: "1. عمل جيب (فتحة) في صدر الدجاج. 2. خلط الفيتا والسبانخ والأوريغانو، ثم حشو الجيب. 3. دهن الجزء الخارجي بزيت الزيتون ومسحوق الثوم. 4. الخبز على درجة 190 مئوية (375 فهرنهايت) لمدة 20-25 دقيقة. طريقة مثالية لتحضير البروتين المتحكم به.",
+                prep_en: "1. Slice a pocket into the chicken breast. 2. Mix feta, spinach, and oregano, then stuff the pocket. 3. Rub exterior with olive oil and garlic powder. 4. Bake at 190°C (375°F) for 20-25 minutes. A perfect method for controlled Protein Prep.",
+                color: "purple"
+            },
+            // 64. Espresso Protein Shake
+            {
+                id: 64,
+                title_ar: "مخفوق البروتين بالإسبريسو (وجبة سائلة سريعة)",
+                title_en: "Espresso Protein Shake (Fast Liquid Meal)",
+                cuisine_ar: "حديث/لياقة، عالي البروتين، قليل الكربوهيدرات (وجبة سائلة سريعة)",
+                cuisine_en: "Modern/Fitness, High Protein, Low Carb (Fast Liquid Meal)",
+                macros_ar: "حوالي 250 سعرة حرارية، 10 جرام كربوهيدرات، 35 جرام بروتين، 8 جرام دهون",
+                macros_en: "Approx. 250 Cal, 10g Carbs, 35g Protein, 8g Fat",
+                ingredients_ar: "1 مغرفة مسحوق بروتين فانيليا/شوكولاتة، 200 مل قهوة/إسبريسو بارد، 100 مل حليب لوز (غير محلى)، 5 جرام بذور الشيا، ثلج.",
+                ingredients_en: "1 scoop Vanilla/Chocolate protein powder, 200ml Cold coffee/espresso, 100ml Almond milk (unsweetened), 5g Chia seeds, Ice.",
+                skills_ar: "الخلط (بالخلاط)، مزج النكهات، التجميع السريع، التحضير بدون طهي",
+                skills_en: "Blending, Flavor Mixing, Quick Assembly, No-Cook Prep",
+                prep_ar: "1. خلط جميع المكونات السائلة في الخلاط. 2. إضافة مسحوق البروتين وبذور الشيا. 3. الخلط حتى يصبح المزيج ناعمًا وكريميًا. 4. يقدم فوراً. بديل وجبة سائل سريع وفعال للغاية أو وقود لما بعد التمرين (استراتيجية التحضير السريع).",
+                prep_en: "1. Combine all liquid ingredients in a blender. 2. Add protein powder and chia seeds. 3. Blend until smooth and creamy. 4. Serve immediately. An extremely fast and efficient liquid meal replacement or post-workout fuel (Quick Prep strategy).",
+                color: "brown"
+            },
+        ];
+
+        // Function to create the HTML for a recipe card
+        function createRecipeCard(recipe) {
+            const colorClass = `bg-green-100 hover:bg-green-200`;
+            return `
+                <div id="recipe-${recipe.id}" class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+                    
+                    <!-- Header (Clickable Area) -->
+                    <div role="button" tabindex="0"
+                         class="flex justify-between items-center p-4 sm:p-6 cursor-pointer ${colorClass} transition-colors duration-200"
+                         onclick="toggleCollapse(${recipe.id})"
+                         aria-expanded="false"
+                         aria-controls="content-${recipe.id}">
+                        
+                        <div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-gray-800">${recipe.id}. ${recipe.title_ar}</h2>
+                            <p class="text-sm sm:text-base text-gray-600 font-medium">${recipe.title_en}</p>
+                        </div>
+
+                        <!-- Icon (Arrow) -->
+                        <svg id="icon-${recipe.id}" class="w-6 h-6 text-blue-600 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Collapsible Content -->
+                    <div id="content-${recipe.id}" class="collapse-content px-4 sm:px-6">
+                        
+                        <!-- Macros Section -->
+                        <div class="bg-green-50 p-3 rounded-lg border-r-4 border-green-500 mb-4">
+                            <p class="text-sm font-semibold text-gray-700">السعرات والمغذيات (Macros):</p>
+                            <p class="text-base text-green-800">${recipe.macros_ar}</p>
+                            <p class="text-sm text-green-700 ltr:text-right" dir="ltr">${recipe.macros_en}</p>
+                        </div>
+                        
+                        <!-- Details Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                            
+                            <!-- Cuisine/Diet -->
+                            <div class="bg-gray-50 p-3 rounded-md border-r-2 border-gray-300">
+                                <p class="text-sm font-semibold text-gray-800">المطبخ/النظام الغذائي (Cuisine/Diet):</p>
+                                <p class="text-sm">${recipe.cuisine_ar}</p>
+                                <p class="text-xs ltr:text-right" dir="ltr">${recipe.cuisine_en}</p>
+                            </div>
+
+                            <!-- Skills -->
+                            <div class="bg-gray-50 p-3 rounded-md border-r-2 border-gray-300">
+                                <p class="text-sm font-semibold text-gray-800">مهارات الطهي (Cooking Skills):</p>
+                                <p class="text-sm">${recipe.skills_ar}</p>
+                                <p class="text-xs ltr:text-right" dir="ltr">${recipe.skills_en}</p>
+                            </div>
+                        </div>
+
+                        <!-- Ingredients Section -->
+                        <div class="mt-4 p-3 bg-red-50 rounded-lg border-r-4 border-red-400">
+                            <p class="text-sm font-semibold text-gray-800 mb-1">المكونات (Ingredients):</p>
+                            <p class="text-sm mb-1">${recipe.ingredients_ar}</p>
+                            <p class="text-xs ltr:text-right text-red-700" dir="ltr">${recipe.ingredients_en}</p>
+                        </div>
+
+                        <!-- Preparation Method -->
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-400">
+                            <p class="text-sm font-semibold text-gray-800 mb-1">طريقة التحضير (Preparation Method):</p>
+                            <div class="text-sm space-y-2">
+                                <p>${recipe.prep_ar}</p>
+                                <hr class="border-blue-200">
+                                <p class="text-xs ltr:text-left text-blue-700" dir="ltr">${recipe.prep_en}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to handle the collapse/expand logic
+        function toggleCollapse(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            const button = document.querySelector(`[onclick="toggleCollapse(${id})"]`);
+
+            const isExpanded = content.classList.contains('open');
+
+            if (isExpanded) {
+                // Collapse
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                // Expand
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Render all recipes on page load
+        window.onload = function() {
+            const container = document.getElementById('recipes-container');
+            container.innerHTML = recipesData.map(createRecipeCard).join('');
+        };
+    </script>
+</body>
+</html>

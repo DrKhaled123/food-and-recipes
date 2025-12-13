@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وصفات التحضير المتقدمة</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better Arabic display */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Noto Kufi Arabic', 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            /* Ensure smooth transition for details elements */
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Styling for the expanded content area */
+        details[open] summary ~ * {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hide the default arrow on details/summary for custom icon control */
+        summary {
+            list-style: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#10b981', // Emerald green
+                        'secondary': '#f97316', // Orange
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="max-w-5xl mx-auto space-y-6">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 border-b-4 border-primary pb-3 mb-8 text-center">
+            قائمة وصفات التحضير المتقدمة
+        </h1>
+
+        <!-- Recipe 57: High-Calorie Tahini and Nut Overnight Oats -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    57. شوفان الطحينة والمكسرات المنقوع (وجبة تضخيم)
+                </h2>
+                <!-- Expand Icon -->
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطبخ/النظام الغذائي: عربي مُدمج، عالي السعرات/تضخيم (استخدام الطحينة و الشوفان)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 600 سعرة حرارية، 70 جرام كربوهيدرات، 20 جرام بروتين، 28 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 60 جرام شوفان مدرفل، 30 جرام طحينة (حوالي 3 ملاعق كبيرة)، 200 مل زبادي/حليب كامل الدسم، 10 جرام عسل/دبس تمر، 10 جرام جوز مقطع، رشة قرفة.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> النقع/التشريب، تقسيم الحصص، التحضير بدون طهي</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. خلط جميع المكونات في وعاء محكم الإغلاق. 2. التحريك جيداً حتى تتجانس الطحينة بالكامل. 3. التبريد طوال الليل. سيمتص الشوفان السائل، مما يخلق وجبة إفطار سميكة وكثيفة السعرات الحرارية وجاهزة للأكل (استراتيجية التحكم في الحصص).</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Arabian Fusion, High-Calorie/Bulking (Utilizing Tahini and Oats)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 600 Cal, 70g Carbs, 20g Protein, 28g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 60g Rolled Oats, 30g Tahini (approx. 3 tbsp), 200ml Full-fat yogurt/milk, 10g Honey/Date syrup, 10g Chopped Walnuts, Pinch of Cinnamon.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Soaking/Infusion, Portioning, No-Cook Prep</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Combine all ingredients in a sealed jar or container. 2. Stir well until the tahini is fully incorporated. 3. Refrigerate overnight. The oats will absorb the liquid, creating a thick, calorically dense, and ready-to-eat breakfast (Portion Control strategy).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Recipe 58: Keto Spiced Ground Lamb Casserole -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    58. طاجن لحم الضأن المفروم المتبل (كيتو)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطخ/النظام الغذائي: عربي/كيتو، قليل الكربوهيدرات (الطهي على دفعات باستخدام لحم الضأن و الجبن)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 650 سعرة حرارية، 8 جرام صافي كربوهيدرات، 40 جرام بروتين، 52 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 150 جرام لحم ضأن مفروم (مزيج 80/20)، 100 جرام قطع باذنجان مطبوخة، 30 جرام جبنة حلوم (مكعبة)، 15 مل زيت زيتون، بهارات (كمون، كزبرة، فلفل حار).</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> القلي السريع، التغطية بالطبقات، الخبز/تحضير الطواجن</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. تحمير لحم الضأن المفروم وتتبيله بكمية كبيرة من البهارات. 2. تغطية قاع طبق فرن صغير بالباذنجان المطبوخ وخليط لحم الضأن. 3. وضع مكعبات جبنة الحلوم بسخاء في الأعلى. 4. الخبز على درجة 180 مئوية لمدة 10-15 دقيقة حتى يذوب الجبن ويصبح ذهبياً. هذه طاجن ممتاز لتحضير البروتين ويمكن تقسيمه لعدة أيام.</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Arabian/Keto, Low-Carb (Batch cooking with Lamb and Cheese)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 650 Cal, 8g Net Carbs, 40g Protein, 52g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 150g Ground lamb (80/20 mix), 100g Cooked eggplant chunks, 30g Halloumi cheese (cubed), 15ml Olive oil, Spices (Cumin, Coriander, Chili).</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Sautéing, Layering, Baking/Casserole Prep</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Brown the ground lamb and season heavily with spices. 2. Layer the bottom of a small oven dish with cooked eggplant and lamb mixture. 3. Top generously with Halloumi cheese cubes. 4. Bake at 180°C (356°F) for 10-15 minutes until the cheese is melted and golden. This is an excellent Protein Prep casserole that can be portioned for multiple days.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Recipe 59: Mediterranean Lentil and Quinoa Salad -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    59. سلطة العدس والكينوا المتوسطية (عالية الألياف)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطخ/النظام الغذائي: عام، عالي الألياف، متوسط الكربوهيدرات (بروتين نباتي وكربوهيدرات معقدة)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 430 سعرة حرارية، 60 جرام كربوهيدرات، 18 جرام بروتين، 12 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 50 جرام عدس مطبوخ، 50 جرام كينوا مطبوخة، 100 جرام خيار، طماطم، بصل (مكعبات)، 15 مل زيت زيتون، عصير ليمون، بقدونس، نعناع، كمون.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> التتبيل، التجميع البسيط، تحضير الحبوب على دفعات</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. خلط العدس والكينوا المطبوخة مسبقاً (استراتيجية تحضير الحبوب). 2. إضافة جميع الخضروات والأعشاب الطازجة المقطعة. 3. خفق زيت الزيتون وعصير الليمون والكمون لعمل التتبيلة. 4. تقليب السلطة بلطف. هذه السلطة ممتازة للتحكم في الحصص وتوفر مصدراً بطيء الإطلاق للطاقة.</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: General, High-Fiber, Medium-Carb (Plant-based protein and complex carbs)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 430 Cal, 60g Carbs, 18g Protein, 12g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 50g Cooked lentils, 50g Cooked quinoa, 100g Cucumber, tomato, onion (diced), 15ml Olive oil, Lemon juice, Parsley, Mint, Cumin.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Dressing, Simple Assembly, Grain Batching</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Combine the pre-cooked lentils and quinoa (Grain Preparation strategy). 2. Add all diced fresh vegetables and herbs. 3. Whisk together the olive oil, lemon juice, and cumin for the dressing. 4. Toss the salad gently. This salad is excellent for Portion Control and provides a slow-releasing energy source.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Recipe 60: Spiced Chicken and Basmati Rice Soup (Shorba) -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    60. شوربة الدجاج والأرز البسمتي المتبلة (شوربة)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطخ/النظام الغذائي: عربي/شوربة، عالي البروتين، متوسط الكربوهيدرات (طعام مريح للتعافي)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 410 سعرة حرارية، 35 جرام كربوهيدرات، 45 جرام بروتين، 10 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 120 جرام صدر دجاج مبشور (من الدفعة)، 60 جرام أرز بسمتي مطبوخ (من الدفعة)، مرق دجاج (قليل الصوديوم)، 5 مل زيت زيتون، بهارات (كمون، هيل)، عصير ليمون، كزبرة طازجة.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> صناعة المرق، إعادة التسخين، تعديل النكهة</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. تسخين مرق الدجاج مع البهارات. 2. إضافة الدجاج المبشور المطبوخ مسبقاً (تحضير البروتين) والأرز البسمتي المطبوخ مسبقاً (تحضير الحبوب). 3. الغليان ببطء لفترة وجيزة للسماح للنكهات بالاندماج. 4. الإنهاء بقليل من عصير الليمون الطازج وقليل من زيت الزيتون. هذا الحساء هو وجبة سهلة الهضم وغنية بالمغذيات للتعافي أو العشاء الخفيف.</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Arabian/Shorba, High-Protein, Medium-Carb (Comfort food for recovery)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 410 Cal, 35g Carbs, 45g Protein, 10g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 120g Shredded chicken breast (from batch), 60g Cooked Basmati rice (from batch), Chicken broth (low sodium), 5ml Olive oil, Spices (Cumin, Cardamom), Lemon juice, Fresh cilantro.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Broth Making, Reheating, Flavor Adjustment</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Heat the chicken broth with spices. 2. Add the pre-cooked shredded chicken (Protein Prep) and pre-cooked Basmati rice (Grain Preparation). 3. Simmer briefly to allow flavors to combine. 4. Finish with a squeeze of fresh lemon juice and a drizzle of olive oil. This soup is a highly digestible, nutrient-dense meal for recovery or light dinner.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- NEW RECIPE 61: Vegan Chickpea & Sweet Potato Curry -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    61. كاري الحمص والبطاطا الحلوة (نباتي، للتحضير المسبق)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطبخ/النظام الغذائي: هندي/نباتي، عالي الألياف، متوسط الكربوهيدرات (وجبة أساسية للتحضير المسبق)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 450 سعرة حرارية، 65 جرام كربوهيدرات، 15 جرام بروتين، 15 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 100 جرام قطع بطاطا حلوة مطبوخة، 80 جرام حمص (معلب/مصفى)، 100 مل حليب جوز الهند (خفيف)، 15 جرام قاعدة بصل/ثوم/زنجبيل، 5 جرام مسحوق كاري، 5 مل زيت جوز الهند.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> القلي السريع، الغليان الخفيف، بناء النكهات بالطبقات، الطهي على دفعات</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. قلي البصل/الثوم/الزنجبيل بزيت جوز الهند. 2. إضافة مسحوق الكاري والطهي لفترة وجيزة. 3. إضافة البطاطا الحلوة والحمص وحليب جوز الهند. 4. الغليان الخفيف لمدة 10-15 دقيقة حتى يصبح المزيج سميكًا. مثالية للطهي على دفعات والتخزين في الفريزر.</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Indian/Vegan, High Fiber, Medium Carb (Staple Batch Meal)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 450 Cal, 65g Carbs, 15g Protein, 15g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 100g Cooked sweet potato chunks, 80g Chickpeas (canned/drained), 100ml Coconut milk (light), 15g Onion/Garlic/Ginger base, 5g Curry powder, 5ml Coconut oil.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Sautéing, Simmering, Flavor layering, Batch Cooking</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Sauté onion/garlic/ginger in coconut oil. 2. Add curry powder and cook briefly. 3. Add sweet potato, chickpeas, and coconut milk. 4. Simmer for 10-15 minutes until thick. Ideal for Batch Cooking and freezer storage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- NEW RECIPE 62: Baked Salmon with Lemon-Herb Marinade -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    62. سلمون مشوي بتتبيلة الليمون والأعشاب (تحضير سريع)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطبخ/النظام الغذائي: متوسطي، عالي البروتين، مناسب للكيتو (تحضير البروتين)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 480 سعرة حرارية، 5 جرام كربوهيدرات، 45 جرام بروتين، 30 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 150 جرام قطعة فيليه سلمون، 15 مل زيت زيتون، قشر/عصير ليمون، شبت/بقدونس طازج، ملح، فلفل، رشة بابريكا.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> التتبيل، الخبز، التحكم في درجة الحرارة، تحضير سريع</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. خفق مكونات التتبيلة وتغطية السلمون بها. 2. التتبيل لمدة 15 دقيقة (أو حتى 4 ساعات). 3. الخبز على درجة 200 مئوية (392 فهرنهايت) لمدة 12-15 دقيقة حتى يصبح طرياً. ممتاز لتحضير البروتين السريع ليقدم مع الخضروات الورقية أو الأرز.</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Mediterranean, High Protein, Keto-friendly (Protein Prep)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 480 Cal, 5g Carbs, 45g Protein, 30g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 150g Salmon fillet, 15ml Olive oil, Lemon zest/juice, Fresh dill/parsley, Salt, Pepper, Pinch of Paprika.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Marinating, Baking, Temperature Control, Quick Prep</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Whisk marinade ingredients and coat the salmon. 2. Marinate for 15 minutes (or up to 4 hours). 3. Bake at 200°C (392°F) for 12-15 minutes until flaky. Excellent for quick Protein Prep to be served with greens or rice.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- NEW RECIPE 63: Feta and Spinach Stuffed Chicken Breast -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    63. صدر دجاج محشو بالفيتا والسبانخ (عالي البروتين)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطبخ/النظام الغذائي: يوناني/عام، عالي البروتين، قليل الكربوهيدرات (بروتين أساسي)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 420 سعرة حرارية، 5 جرام كربوهيدرات، 55 جرام بروتين، 20 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 180 جرام صدر دجاج، 30 جرام جبنة فيتا (مفتتة)، 30 جرام سبانخ طازجة، 5 مل زيت زيتون، مسحوق ثوم، أوريغانو مجفف.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> الحشو، القلي السريع (اختياري)، الخبز، التحكم في الحصص</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. عمل جيب (فتحة) في صدر الدجاج. 2. خلط الفيتا والسبانخ والأوريغانو، ثم حشو الجيب. 3. دهن الجزء الخارجي بزيت الزيتون ومسحوق الثوم. 4. الخبز على درجة 190 مئوية (375 فهرنهايت) لمدة 20-25 دقيقة. طريقة مثالية لتحضير البروتين المتحكم به.</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Greek/General, High Protein, Low Carb (Core Protein)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 420 Cal, 5g Carbs, 55g Protein, 20g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 180g Chicken breast, 30g Feta cheese (crumbled), 30g Fresh spinach, 5ml Olive oil, Garlic powder, Dried oregano.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Stuffing, Searing (optional), Baking, Portion Control</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Slice a pocket into the chicken breast. 2. Mix feta, spinach, and oregano, then stuff the pocket. 3. Rub exterior with olive oil and garlic powder. 4. Bake at 190°C (375°F) for 20-25 minutes. A perfect method for controlled Protein Prep.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- NEW RECIPE 64: Espresso Protein Shake -->
+        <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
+                    64. مخفوق البروتين بالإسبريسو (وجبة سائلة سريعة)
+                </h2>
+                <svg class="w-7 h-7 transform transition-transform duration-300 group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Arabic Section -->
+                    <div dir="rtl" class="space-y-4 p-4 border-r-4 border-primary bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-primary">التفاصيل باللغة العربية</h3>
+                        <p class="text-sm font-semibold">المطبخ/النظام الغذائي: حديث/لياقة، عالي البروتين، قليل الكربوهيدرات (وجبة سائلة سريعة)</p>
+                        <p class="text-sm font-semibold text-secondary">إجمالي المغذيات (للحصة): حوالي 250 سعرة حرارية، 10 جرام كربوهيدرات، 35 جرام بروتين، 8 جرام دهون</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">المكونات:</span> 1 مغرفة مسحوق بروتين فانيليا/شوكولاتة، 200 مل قهوة/إسبريسو بارد، 100 مل حليب لوز (غير محلى)، 5 جرام بذور الشيا، ثلج.</li>
+                            <li><span class="font-semibold">مهارات الطهي:</span> الخلط (بالخلاط)، مزج النكهات، التجميع السريع، التحضير بدون طهي</li>
+                            <li><span class="font-semibold">طريقة التحضير:</span> 1. خلط جميع المكونات السائلة في الخلاط. 2. إضافة مسحوق البروتين وبذور الشيا. 3. الخلط حتى يصبح المزيج ناعمًا وكريميًا. 4. يقدم فوراً. بديل وجبة سائل سريع وفعال للغاية أو وقود لما بعد التمرين (استراتيجية التحضير السريع).</li>
+                        </ul>
+                    </div>
+                    <!-- English Section -->
+                    <div dir="ltr" class="space-y-4 p-4 border-l-4 border-gray-400 bg-white rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-700">English Details</h3>
+                        <p class="text-sm font-semibold">Cuisine/Diet: Modern/Fitness, High Protein, Low Carb (Fast Liquid Meal)</p>
+                        <p class="text-sm font-semibold text-secondary">Total Macros (per serving): Approx. 250 Cal, 10g Carbs, 35g Protein, 8g Fat</p>
+                        <ul class="text-sm list-disc list-inside space-y-1 text-gray-600">
+                            <li><span class="font-semibold">Ingredients:</span> 1 scoop Vanilla/Chocolate protein powder, 200ml Cold coffee/espresso, 100ml Almond milk (unsweetened), 5g Chia seeds, Ice.</li>
+                            <li><span class="font-semibold">Skills of Cooking:</span> Blending, Flavor Mixing, Quick Assembly, No-Cook Prep</li>
+                            <li><span class="font-semibold">Preparation Method:</span> 1. Combine all liquid ingredients in a blender. 2. Add protein powder and chia seeds. 3. Blend until smooth and creamy. 4. Serve immediately. An extremely fast and efficient liquid meal replacement or post-workout fuel (Quick Prep strategy).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <footer class="text-center mt-10 text-gray-500 text-sm py-4 border-t border-gray-300">
+            تم تصميم وعرض الوصفات للمقارنة والتحضير السهل. انقر على العنوان لعرض التفاصيل.
+        </footer>
+    </div>
+</body>
+</html>
