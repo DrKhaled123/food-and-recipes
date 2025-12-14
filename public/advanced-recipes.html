@@ -54,9 +54,33 @@
             قائمة وصفات التحضير المتقدمة
         </h1>
 
+        <!-- Access Overlay -->
+        <div id="advanced-access-overlay" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 sm:p-8 animate-slide-up">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">اشترك معنا</h2>
+                <ul class="text-gray-700 text-sm sm:text-base space-y-2 mb-6">
+                    <li>• Get more recipes content for different cultures with skills</li>
+                    <li>• Get follow-up nutrition meals and diet</li>
+                    <li>• Get all access to our apps and have a shared community with you</li>
+                    <li>• Save internet time and effort to search new recipes</li>
+                </ul>
+                <div class="flex justify-center mb-6">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2xF72-V420SMGuIxDY6zyelND2-DLKhJ6GJvRDWowCiObYA/viewform?usp=publish-editor" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 rounded-xl text-white bg-primary hover:bg-secondary font-bold shadow-lg">Subscribe Now</a>
+                </div>
+                <div class="mt-2">
+                    <label for="access-code" class="block text-sm font-semibold text-gray-700 mb-2 text-center">Enter Access Code</label>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input id="access-code" type="text" class="flex-1 border rounded-lg px-4 py-3 bg-gray-50 focus:ring-primary focus:border-primary" placeholder="Khaled, Amany, coach, recipes food" />
+                        <button id="open-advanced" class="px-6 py-3 rounded-lg text-white bg-primary hover:bg-secondary font-bold">Open Advanced Recipes</button>
+                    </div>
+                    <p id="access-error" class="mt-2 text-sm text-red-600 hidden text-center">Invalid code. Try Khaled, Amany, coach, or recipes food.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Recipe 57: High-Calorie Tahini and Nut Overnight Oats -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-green-50 hover:bg-green-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     57. شوفان الطحينة والمكسرات المنقوع (وجبة تضخيم)
                 </h2>
@@ -93,7 +117,7 @@
 
         <!-- Recipe 58: Keto Spiced Ground Lamb Casserole -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-purple-50 hover:bg-purple-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     58. طاجن لحم الضأن المفروم المتبل (كيتو)
                 </h2>
@@ -129,7 +153,7 @@
 
         <!-- Recipe 59: Mediterranean Lentil and Quinoa Salad -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-yellow-50 hover:bg-yellow-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     59. سلطة العدس والكينوا المتوسطية (عالية الألياف)
                 </h2>
@@ -165,7 +189,7 @@
 
         <!-- Recipe 60: Spiced Chicken and Basmati Rice Soup (Shorba) -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-blue-50 hover:bg-blue-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     60. شوربة الدجاج والأرز البسمتي المتبلة (شوربة)
                 </h2>
@@ -201,7 +225,7 @@
 
         <!-- NEW RECIPE 61: Vegan Chickpea & Sweet Potato Curry -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-red-50 hover:bg-red-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     61. كاري الحمص والبطاطا الحلوة (نباتي، للتحضير المسبق)
                 </h2>
@@ -237,7 +261,7 @@
 
         <!-- NEW RECIPE 62: Baked Salmon with Lemon-Herb Marinade -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-green-50 hover:bg-green-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     62. سلمون مشوي بتتبيلة الليمون والأعشاب (تحضير سريع)
                 </h2>
@@ -273,7 +297,7 @@
 
         <!-- NEW RECIPE 63: Feta and Spinach Stuffed Chicken Breast -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-purple-50 hover:bg-purple-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     63. صدر دجاج محشو بالفيتا والسبانخ (عالي البروتين)
                 </h2>
@@ -309,7 +333,7 @@
 
         <!-- NEW RECIPE 64: Espresso Protein Shake -->
         <details class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200">
-            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-primary/10 hover:bg-primary/20 transition duration-300">
+            <summary class="flex justify-between items-center p-4 sm:p-5 cursor-pointer bg-yellow-50 hover:bg-yellow-100 transition duration-300 transform hover:scale-[1.01]">
                 <h2 class="text-xl sm:text-2xl font-bold text-gray-800 group-open:text-primary">
                     64. مخفوق البروتين بالإسبريسو (وجبة سائلة سريعة)
                 </h2>
@@ -347,5 +371,40 @@
             تم تصميم وعرض الوصفات للمقارنة والتحضير السهل. انقر على العنوان لعرض التفاصيل.
         </footer>
     </div>
+
+    <script>
+        (function() {
+            const allowed = ["khaled", "amany", "coach", "recipes food"];
+            const overlay = document.getElementById('advanced-access-overlay');
+            const btn = document.getElementById('open-advanced');
+            const input = document.getElementById('access-code');
+            const err = document.getElementById('access-error');
+
+            function isAllowed(v) {
+                return allowed.includes(String(v).trim().toLowerCase());
+            }
+
+            function grant() {
+                overlay.classList.add('hidden');
+                try { localStorage.setItem('advanced_access_granted', '1'); } catch (_) {}
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                try {
+                    if (localStorage.getItem('advanced_access_granted') === '1') {
+                        overlay.classList.add('hidden');
+                    }
+                } catch (_) {}
+            });
+
+            btn?.addEventListener('click', () => {
+                if (isAllowed(input?.value)) {
+                    grant();
+                } else {
+                    err?.classList.remove('hidden');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
